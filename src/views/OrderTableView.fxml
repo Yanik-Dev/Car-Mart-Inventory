@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<TabPane prefHeight="631.0" prefWidth="1401.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <tabs>
+      <Tab closable="false" text="Purchase Order">
+         <content>
+            <BorderPane>
+               <top>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <items>
+                        <TextField fx:id="orderReceiptIdTxtbx" promptText="Receipt Number" />
+                        <TextField fx:id="orderTrnTxtbx" promptText="TRN" />
+                        <ComboBox fx:id="orderMakeCmbx" prefHeight="25.0" prefWidth="199.0" promptText="Filter by Make" />
+                        <TextField fx:id="orderModelTxtbx" promptText="Vehicle Model" />
+                        <DatePicker fx:id="orderDatePckr" promptText="Filter by order date" />
+                        <ComboBox fx:id="orderUserCmbx" prefHeight="25.0" prefWidth="199.0" promptText="Filter by Processing Officer" />
+                        <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="47.0" />
+                        <Button fx:id="newOrderBtn" defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="New Purchase Order" />
+                     </items>
+                  </ToolBar>
+               </top>
+               <bottom>
+                  <ToolBar prefHeight="25.0" prefWidth="1235.0" BorderPane.alignment="CENTER">
+                     <items>
+                        <Label fx:id="dateCreatedLbl" prefHeight="17.0" prefWidth="127.0" text="Date Created: " />
+                        <Separator orientation="VERTICAL" prefHeight="17.0" prefWidth="20.0" />
+                        <Label fx:id="orderLastUpdatedLbl" prefHeight="17.0" prefWidth="127.0" text="Last Updated: " />
+                     </items>
+                  </ToolBar>
+               </bottom>
+               <center>
+                  <TableView fx:id="orderTable" prefHeight="462.0" prefWidth="1163.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="orderReceiptIdColumn" prefWidth="75.0" text="Receipt Id" />
+                        <TableColumn fx:id="orderTrnColumn" prefWidth="75.0" text="TRN" />
+                        <TableColumn fx:id="orderMakeColumn" prefWidth="91.00003051757812" text="Vehicle Make" />
+                        <TableColumn fx:id="orderModelColumn" prefWidth="95.0" text="Vehicle Model" />
+                        <TableColumn fx:id="orderSellingPriceColumn" prefWidth="134.0" text="Selling Cost" />
+                        <TableColumn fx:id="orderQuantityColumn" prefWidth="75.0" text="Quantity" />
+                        <TableColumn fx:id="orderDiscountColumn" prefWidth="157.0" text="Total Discount" />
+                        <TableColumn fx:id="orderTaxColumn" prefWidth="131.0" text="Total Tax" />
+                        <TableColumn fx:id="orderSubTotalColumn" prefWidth="92.0" text="Sub Total" />
+                        <TableColumn fx:id="orderTotalColumn" prefWidth="91.0" text="Total" />
+                        <TableColumn fx:id="orderUserColumn" prefWidth="89.0" text="Process By" />
+                        <TableColumn fx:id="orderSummaryColumn" prefWidth="293.0" text="Summary" />
+                     </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Rental">
+         <content>
+            <BorderPane>
+               <top>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <items>
+                        <TextField fx:id="rentalReceiptTxtbx" promptText="Receipt Number" />
+                        <TextField fx:id="rentalTrnTxtbx" promptText="TRN" />
+                        <ComboBox fx:id="rentalMakeCmbx" prefHeight="25.0" prefWidth="199.0" promptText="Filter by Make" />
+                        <TextField fx:id="rentalModelTxtbx" promptText="Vehicle Model" />
+                        <DatePicker fx:id="rentalDatePckr" promptText="Filter by rental date" />
+                        <ComboBox fx:id="rentalUserCmbx" prefHeight="25.0" prefWidth="199.0" promptText="Filter by Processing Officer" />
+                        <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="47.0" />
+                        <Button fx:id="newRentalBtn" defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="New Rental" />
+                     </items>
+                  </ToolBar>
+               </top>
+               <center>
+                  <TableView fx:id="rentalTable" prefHeight="462.0" prefWidth="1163.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="rentalReceiptIdColumn" prefWidth="75.0" text="Receipt Id" />
+                        <TableColumn fx:id="rentalTrnColumn" prefWidth="75.0" text="TRN" />
+                        <TableColumn fx:id="rentaMakeColumn" prefWidth="91.00003051757812" text="Vehicle Make" />
+                      <TableColumn fx:id="rentalModelColumn" prefWidth="95.0" text="Vehicle Model" />
+                        <TableColumn fx:id="rentalPlateColumn" prefWidth="75.0" text="Plate No." />
+                        <TableColumn fx:id="rentalDateColumn" prefWidth="139.0" text="Start Date" />
+                        <TableColumn fx:id="rentalEndDateColumn" prefWidth="99.0" text="End Date" />
+                        <TableColumn fx:id="rentalCostColumn" prefWidth="134.0" text="Unit Cost" />
+                        <TableColumn fx:id="rentalSubTotalColumn" prefWidth="157.0" text="Total Discount" />
+                        <TableColumn fx:id="rentalTotalColumn" prefWidth="131.0" text="Total Tax" />
+                        <TableColumn fx:id="rentalSubTotalColumn" prefWidth="92.0" text="Sub Total" />
+                        <TableColumn fx:id="rentalTotalColumn" prefWidth="91.0" text="Total" />
+                        <TableColumn fx:id="rentalUserColumn" prefWidth="89.0" text="Process By" />
+                    </columns>
+                  </TableView>
+               </center>
+               <bottom>
+                  <ToolBar prefHeight="25.0" prefWidth="1235.0" BorderPane.alignment="CENTER">
+                     <items>
+                        <Label fx:id="rentalCreatedDateLbl" prefHeight="17.0" prefWidth="127.0" text="Date Created: " />
+                        <Separator orientation="VERTICAL" prefHeight="17.0" prefWidth="20.0" />
+                        <Label fx:id="rentalLastUpdatedLbl" prefHeight="17.0" prefWidth="127.0" text="Last Updated: " />
+                     </items>
+                  </ToolBar>
+               </bottom>
+            </BorderPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

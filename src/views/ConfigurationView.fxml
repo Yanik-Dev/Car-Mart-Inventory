@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="453.0" prefWidth="324.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CategoryViewController">
+   <children>
+      <TabPane prefHeight="478.0" prefWidth="381.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Local Db Config">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="376.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="539.0" minWidth="10.0" prefWidth="202.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="539.0" minWidth="10.0" prefWidth="17.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="539.0" minWidth="10.0" prefWidth="155.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="364.0" minHeight="6.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="5.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="233.0" minHeight="0.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="localDbUrlxtbx" prefHeight="31.0" prefWidth="299.0" promptText="www.example.com" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="localDbUsernameTxtbx" prefHeight="31.0" prefWidth="167.0" promptText="Username" GridPane.columnSpan="3" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="localDbSaveBtn" defaultButton="true" mnemonicParsing="false" onAction="#addNewCategory" prefHeight="32.0" prefWidth="364.0" text="Save" GridPane.columnSpan="3" GridPane.rowIndex="12" />
+                              <TextField fx:id="localDbNameTxtbx" prefHeight="31.0" prefWidth="167.0" promptText="Database" GridPane.columnSpan="3" GridPane.rowIndex="10">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="localDbPasswordTxtbx" promptText="Password" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <Button fx:id="localDbTestConnectionBtn" mnemonicParsing="false" onAction="#addNewCategory" prefHeight="32.0" prefWidth="362.0" text="Test Connection" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Hostname" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Port" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Username" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Password" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Database" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="localPortTxtbx" prefHeight="25.0" prefWidth="186.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Type" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="localDbTypeCmbx" prefHeight="25.0" prefWidth="197.0" GridPane.rowIndex="4" />
+                              <ToggleButton fx:id="localShowTxtbx" mnemonicParsing="false" prefHeight="32.0" prefWidth="61.0" text="Show" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Remote Db Config">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="376.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="539.0" minWidth="10.0" prefWidth="202.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="539.0" minWidth="10.0" prefWidth="17.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="539.0" minWidth="10.0" prefWidth="155.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="364.0" minHeight="6.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="5.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.0" minHeight="0.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="remoteDbUrlTxtbx" prefHeight="31.0" prefWidth="299.0" promptText="www.example.com" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="remoteDbUsernameTxtbx" prefHeight="31.0" prefWidth="167.0" promptText="Username" GridPane.columnSpan="3" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="remoteDbSaveBtn" defaultButton="true" mnemonicParsing="false" onAction="#addNewCategory" prefHeight="32.0" prefWidth="364.0" text="Save" GridPane.columnSpan="3" GridPane.rowIndex="12" />
+                              <TextField fx:id="remoteDbNameTxtbx" prefHeight="31.0" prefWidth="167.0" promptText="Database" GridPane.columnSpan="3" GridPane.rowIndex="10">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="remoteDbPasswordTxtbx1" promptText="Password" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <Button fx:id="remoteDbTestConnectionBtn" mnemonicParsing="false" onAction="#addNewCategory" prefHeight="32.0" prefWidth="362.0" text="Test Connection" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Hostname" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Port" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Username" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Password" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Database" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="remotePortSpinner" prefHeight="25.0" prefWidth="186.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Type" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="remoteDbTypeCmbx" prefHeight="25.0" prefWidth="197.0" GridPane.rowIndex="4" />
+                              <ToggleButton fx:id="showRemoteBtn" mnemonicParsing="false" prefHeight="32.0" prefWidth="61.0" text="Show" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="File Server Config">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="376.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="539.0" minWidth="10.0" prefWidth="229.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="539.0" minWidth="10.0" prefWidth="127.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="364.0" minHeight="6.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="5.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.0" minHeight="0.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="uploadHostTxtbx" prefHeight="31.0" prefWidth="299.0" promptText="www.example.com" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="uploadUsernameTxtbx" prefHeight="31.0" prefWidth="167.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="saveUploadInfoBtn" defaultButton="true" mnemonicParsing="false" onAction="#addNewCategory" prefHeight="32.0" prefWidth="364.0" text="Save" GridPane.columnSpan="2147483647" GridPane.rowIndex="12" />
+                              <TextField fx:id="uploadPortTxtbx" prefHeight="31.0" prefWidth="363.0" promptText="Port" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="directoryTxtbx" prefHeight="31.0" prefWidth="167.0" promptText="Database" GridPane.columnSpan="2147483647" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="uploadPasswordTxtbx" promptText="Password" GridPane.columnSpan="2147483647" GridPane.rowIndex="10">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <Button fx:id="testUploadConnectionBtn" mnemonicParsing="false" onAction="#addNewCategory" prefHeight="32.0" prefWidth="362.0" text="Test Connection" GridPane.columnSpan="2147483647" GridPane.rowIndex="11" />
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Hostname" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Port" GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Login" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Password" GridPane.columnSpan="2147483647" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="Directory" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CustomerFormViewController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.0" minWidth="10.0" prefWidth="94.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.0" minWidth="9.0" prefWidth="12.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="193.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="477.0" minWidth="0.0" prefWidth="9.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="477.0" minWidth="10.0" prefWidth="188.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="477.0" minWidth="5.0" prefWidth="11.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="129.0" minHeight="7.0" prefHeight="7.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="228.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="45.0" minHeight="34.0" prefHeight="36.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="31.0" prefHeight="34.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="61.0" minHeight="19.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="88.0" minHeight="20.0" prefHeight="33.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="114.0" minHeight="8.0" prefHeight="38.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="117.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="167.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="54.0" minHeight="0.0" prefHeight="54.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="trnTxtbx" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label contentDisplay="RIGHT" prefHeight="17.0" prefWidth="94.0" text="TRN" GridPane.rowIndex="1" />
+      <TextField fx:id="firstnameTxtbx" promptText="First Name" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label contentDisplay="RIGHT" prefHeight="17.0" prefWidth="98.0" text="Name" GridPane.rowIndex="2" />
+      <TextField fx:id="lastnameTxtbx" promptText="Last Name" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Label contentDisplay="RIGHT" prefHeight="17.0" prefWidth="97.0" text="Gender" GridPane.rowIndex="3" />
+      <Label contentDisplay="RIGHT" prefHeight="17.0" prefWidth="94.0" text="Date of Birth" GridPane.rowIndex="4" />
+      <DatePicker fx:id="dateOfBirthDatePckr" prefHeight="25.0" prefWidth="194.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Label contentDisplay="RIGHT" prefHeight="17.0" prefWidth="95.0" text="Email" GridPane.rowIndex="5" />
+      <TextField fx:id="emailTxtbx" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+      <Label contentDisplay="TOP" prefHeight="17.0" prefWidth="96.0" text="Address" GridPane.rowIndex="7" />
+      <TextField fx:id="streetTxtbx" prefHeight="25.0" prefWidth="225.0" promptText="Street/District" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="7" />
+      <TextField fx:id="cityTxtbx" prefHeight="25.0" prefWidth="183.0" promptText="City/Town" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="8" />
+      <TextField fx:id="provinceTxtbx" prefHeight="25.0" prefWidth="183.0" promptText="Province" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+      <Label contentDisplay="RIGHT" prefHeight="17.0" prefWidth="88.0" text="Contact Number" GridPane.rowIndex="6" />
+      <TextField fx:id="primaryNumberTxtbx" promptText="Contact Number 1" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <TextField fx:id="secondaryNumberTxtbx" promptText="Contact Number 2" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <ListView fx:id="fileListView" onMouseClicked="#shouldDisableDelete" onMouseExited="#shouldDisableDelete" prefHeight="75.0" prefWidth="158.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+      <Label contentDisplay="RIGHT" prefHeight="17.0" prefWidth="96.0" text="Associated Files" GridPane.rowIndex="10" />
+      <Button fx:id="addFilesBtn" mnemonicParsing="false" onAction="#openFileDialog" prefHeight="25.0" prefWidth="191.0" text="Add Files " GridPane.columnIndex="2" GridPane.rowIndex="10" />
+      <RadioButton fx:id="maleRdbtn" mnemonicParsing="false" selected="true" text="Male" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <toggleGroup>
+            <ToggleGroup fx:id="genderGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <children>
+            <RadioButton fx:id="femaleRdBtn" layoutX="68.0" layoutY="5.0" mnemonicParsing="false" text="Female" toggleGroup="$genderGroup" />
+         </children>
+      </Pane>
+      <Pane prefHeight="54.0" prefWidth="229.0" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.rowIndex="12">
+         <children>
+            <Button fx:id="addBtn" defaultButton="true" layoutX="78.0" layoutY="10.0" mnemonicParsing="false" onAction="#submit" prefHeight="35.0" prefWidth="95.0" text="Add " />
+            <Button fx:id="clearBtn" layoutX="182.0" layoutY="10.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="104.0" text="Clear" />
+            <Button fx:id="addBtn1" cancelButton="true" layoutX="296.0" layoutY="10.0" mnemonicParsing="false" onAction="#submit" prefHeight="35.0" prefWidth="95.0" text="Cancel" />
+         </children>
+      </Pane>
+      <Button fx:id="deleteFilesBtn" mnemonicParsing="false" onAction="#deleteFiles" prefHeight="25.0" prefWidth="191.0" text="Delete Selected Files" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>

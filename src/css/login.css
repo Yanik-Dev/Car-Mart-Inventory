@@ -1,0 +1,19 @@
+/*.text-field:focused {
+-fx-background-color: #fff;
+-fx-background-insets: 0, 1, 2;
+-fx-background-radius: 1;
+}
+ 
+.text-field{
+-fx-border-color: #eee;
+-fx-border-radius: 0;
+-fx-select-on-focus:false;
+}
+
+ 
+.button{
+-fx-border-color: #eee;
+-fx-background-color: #eee;
+-fx-border-radius: 0;
+-fx-select-on-focus:false;
+}*/
